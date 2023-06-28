@@ -1,0 +1,10 @@
+.visible {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  margin: auto;
+}
+
+.hidden {
+  display: none;
+}

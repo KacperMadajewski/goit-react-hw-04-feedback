@@ -1,0 +1,13 @@
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.message {
+  color: red;
+  display: flex;
+  justify-content: center;
+}

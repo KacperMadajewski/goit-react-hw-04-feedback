@@ -1,0 +1,48 @@
+.position {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.btnGreen {
+  font-size: 40px;
+  border-radius: 10%;
+  border: 2px;
+  background-color: rgb(136, 122, 103);
+  color: rgb(209, 198, 198);
+  cursor: pointer;
+}
+
+.btnBlue {
+  font-size: 40px;
+  border-radius: 10%;
+  border: 2px;
+  background-color: rgb(136, 122, 103);
+  color: rgb(209, 198, 198);
+  cursor: pointer;
+}
+
+.btnRed {
+  font-size: 40px;
+  border-radius: 10%;
+  border: 2px;
+  background-color: rgb(136, 122, 103);
+  color: rgb(209, 198, 198);
+  cursor: pointer;
+}
+
+.btnGreen:hover {
+  background-color: rgba(133, 120, 102, 0.424);
+  color: rgb(69, 95, 29);
+}
+
+.btnBlue:hover {
+  background-color: rgba(133, 120, 102, 0.424);
+  color: rgb(64, 64, 181);
+}
+
+.btnRed:hover {
+  background-color: rgba(133, 120, 102, 0.424);
+  color: rgb(188, 68, 68);
+}
