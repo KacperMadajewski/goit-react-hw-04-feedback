@@ -1,9 +1,9 @@
 import Styles from './Notifications.module.css';
-import { Statistics } from 'components/Statistics/Statistics';
+import React from 'react';
 
-export default function Notification() {
+export function Notification({total}) {
   const visibility = () => {
-    if (Statistics.total === 0) {
+    if (total === 0) {
       return Styles.visibile;
     } else {
       return Styles.hidden;
