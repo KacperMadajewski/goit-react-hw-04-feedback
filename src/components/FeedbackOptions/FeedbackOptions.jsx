@@ -1,27 +1,43 @@
-import React, { Component } from 'react';
+import {
+  CountGoodContext,
+  CountBadContext,
+  CountNeutralContext,
+} from 'Context/Context';
 import Styles from './FeedbackOptions.module.css';
-import PropTypes from 'prop-types';
+import { useContext } from 'react';
 
-export class FeedbackOptions extends Component {
-  render() {
-    const { forOpinion } = this.props;
+export function FeedbackOptions() {
+  const [good, setGood] = useContext(CountGoodContext);
+  const [bad, setBad] = useContext(CountBadContext);
+  const [neutral, setNeutral] = useContext(CountNeutralContext);
 
-    return (
-      <div className={Styles.position}>
-        <button name="good" className={Styles.btnGreen} onClick={forOpinion}>
-          Good
-        </button>
-        <button name="neutral" className={Styles.btnBlue} onClick={forOpinion}>
-          Neutral
-        </button>
-        <button name="bad" className={Styles.btnRed} onClick={forOpinion}>
-          Bad
-        </button>
-      </div>
-    );
+  function handleClickGood() {
+    setGood(good + 1);
   }
-}
 
-FeedbackOptions.propTypes = {
-  forOpinion: PropTypes.func,
-};
+  function handleClickBad() {
+    setBad(bad + 1);
+  }
+
+  function handleClickNeutral() {
+    setNeutral(neutral + 1);
+  }
+
+  return (
+    <div className={Styles.position}>
+      <button name="good" className={Styles.btnGreen} onClick={handleClickGood}>
+        Good
+      </button>
+      <button
+        name="neutral"
+        className={Styles.btnBlue}
+        onClick={handleClickBad}
+      >
+        Neutral
+      </button>
+      <button name="bad" className={Styles.btnRed} onClick={handleClickNeutral}>
+        Bad
+      </button>
+    </div>
+  );
+}

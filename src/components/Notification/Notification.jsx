@@ -1,28 +1,18 @@
-import React, { Component } from 'react';
 import Styles from './Notifications.module.css';
-import PropTypes from 'prop-types';
+import { Statistics } from 'components/Statistics/Statistics';
 
-export class Notification extends Component {
-  render() {
-    const { total, message } = this.props;
+export default function Notification() {
+  const visibility = () => {
+    if (Statistics.total === 0) {
+      return Styles.visibile;
+    } else {
+      return Styles.hidden;
+    }
+  };
 
-    const visibility = () => {
-      if (total === 0) {
-        return Styles.visibile;
-      } else {
-        return Styles.hidden;
-      }
-    };
-
-    return (
-      <div className={visibility()}>
-        <h4 className={Styles.message}>{message}</h4>
-      </div>
-    );
-  }
+  return (
+    <div className={visibility()}>
+      <h4 className={Styles.message}>There is no feedback</h4>
+    </div>
+  );
 }
-
-Notification.propTypes = {
-  total: PropTypes.number,
-  message: PropTypes.string,
-};
