@@ -1,18 +1,9 @@
 import Styles from './FeedbackOptions.module.css';
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 export function FeedbackOptions({ handleClick }) {
-  // function handleClickGood() {
-  //   setGood(good + 1);
-  // }
-
-  // function handleClickBad() {
-  //   setBad(bad + 1);
-  // }
-
-  // function handleClickNeutral() {
-  //   setNeutral(neutral + 1);
-  // }
 
   return (
     <div className={Styles.position}>
@@ -40,3 +31,7 @@ export function FeedbackOptions({ handleClick }) {
     </div>
   );
 }
+
+FeedbackOptions.propTypes = {
+  handleClick: PropTypes.func,
+};

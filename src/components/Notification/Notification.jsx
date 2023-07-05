@@ -1,5 +1,7 @@
 import Styles from './Notifications.module.css';
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 export function Notification({total}) {
   const visibility = () => {
@@ -16,3 +18,8 @@ export function Notification({total}) {
     </div>
   );
 }
+
+
+Notification.propTypes = {
+  total: PropTypes.any,
+};

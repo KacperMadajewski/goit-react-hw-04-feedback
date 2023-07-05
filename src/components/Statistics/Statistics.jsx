@@ -1,6 +1,6 @@
 import Styles from './Statistics.module.css';
 import React from 'react';
-
+import PropTypes from 'prop-types';
 
 export function Statistics({good, bad, neutral, total, positivePercentage}) {
 
@@ -22,3 +22,11 @@ export function Statistics({good, bad, neutral, total, positivePercentage}) {
     </ul>
   );
 }
+
+Statistics.propTypes = {
+  good: PropTypes.any,
+  neutral: PropTypes.any,
+  bad: PropTypes.any,
+  total: PropTypes.any,
+  positivePercentage: PropTypes.any,
+};
